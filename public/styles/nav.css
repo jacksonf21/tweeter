@@ -1,0 +1,20 @@
+nav#navbox {
+  padding: 1.5em 1.5em 0px 1.5em;
+  height: 120px;
+  background-color: #4056A1;
+  color: #fafafa;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: 'Source Sans Pro', 'sans-serif';
+}
+
+#navbox span {
+  font-family: 'Bungee', 'sans-serif';
+  font-size: 40px;
+}
+
+#navbox div {
+  float: right;
+}
