@@ -22,6 +22,8 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -48,12 +50,13 @@
       
       <section class="new-tweet">
         <form action='/tweets/' method='POST'>
-          <textarea maxlength="140" name="text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" placeholder="What are you humming about?" rows='1'></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
-      <div>
+
+      <div id='tweet-feed'>
       <p>LOREM IPSUM
         The classic latin passage that just never gets old, enjoy as much (or as little) lorem ipsum as you can handle with our easy to use filler text generator.
         
@@ -89,7 +92,7 @@
 
       <p>ipsum lorem etc.</p>
 
-    </div>
+      </div>
     </main>
 
   </body>

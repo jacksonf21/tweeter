@@ -12,11 +12,12 @@
   outline: 0;
   resize: none;
   font-size: 1em;
+
+  /* overflow: hidden; */
 }
 
 .new-tweet textarea:focus{
   font-size: 1em;
-  
 }
 
 .new-tweet textarea::-webkit-input-placeholder {
@@ -38,4 +39,12 @@ span.counter {
   margin-top: 1em;
   float: right;
   font-family: 'Bungee', 'sans-serif';
+  color: black;
+}
+
+span.counter.active {
+  margin-top: 1em;
+  float: right;
+  font-family: 'Bungee', 'sans-serif';
+  color: red;
 }
