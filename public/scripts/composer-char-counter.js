@@ -4,7 +4,7 @@ $(document).ready(function() {
   const newPostField = document.getElementsByClassName('new-tweet')[0].getElementsByTagName('textarea')[0];
 
   const counter = document.getElementsByClassName('new-tweet')[0].getElementsByTagName('span')[0];
-
+  
   $(newPostField).on('keyup', function() {
     counter.innerText = 140 - this.value.length;
     if (this.value.length > 140) $('span.counter').addClass('active');
