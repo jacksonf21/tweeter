@@ -55,3 +55,26 @@ header h2 {
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
 }
+
+#button {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px; 
+  z-index: 1;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}

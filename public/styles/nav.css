@@ -17,4 +17,30 @@ nav#navbox {
 
 #navbox div {
   float: right;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbox a {
+  text-align: center;
+}
+
+
+#target {
+  margin-top: 10px;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }

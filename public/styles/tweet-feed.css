@@ -1,4 +1,13 @@
 
+#errAlert {
+  border: 3px dashed  #ff4d4d;
+  width: 100%;
+  color:  #ff4d4d;
+  margin-top: 25px;
+  padding: 8px;
+  display: none;
+}
+
 #tweet-feed article{
   margin-top: 30px;
   margin-bottom: 30px;
@@ -51,6 +60,10 @@
   width: 100%;
   text-align: right;
   margin-right: 1em;
+}
+
+#tweet-feed footer #icons img{
+  margin-left: 1em;
 }
 
 article > content {

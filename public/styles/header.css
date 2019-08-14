@@ -10,14 +10,8 @@ header {
 
 }
 
-header img {
-  left: 630px;
-  border: 10px solid red;
-}
-
 header h2 {
   margin-top: 0;
-  border: 10px solid red;
   min-width: 256px;
   text-align: center;
 }

@@ -5,16 +5,19 @@ $(document).ready(function() {
 
   const counter = document.getElementsByClassName('new-tweet')[0].getElementsByTagName('span')[0];
   
-  $(newPostField).on('keyup', function() {
+  $(newPostField).on('input', function() {
     counter.innerText = 140 - this.value.length;
     if (this.value.length > 140) $('span.counter').addClass('active');
     else $('span.counter').removeClass('active');
+
+    this.style.height = 'auto';
+    this.style.height = (Number(this.scrollHeight) + 2) + 'px';
   });
 
-  $(newPostField).on('keydown', function() {
-    counter.innerText = 140 - this.value.length;
-    if (this.value.length > 140) $('span.counter').addClass('active');
-    else $('span.counter').removeClass('active');
-  });
+  // $(newPostField).on('keydown', function() {
+  //   counter.innerText = 140 - this.value.length;
+  //   if (this.value.length > 140) $('span.counter').addClass('active');
+  //   else $('span.counter').removeClass('active');
+  // });
 
 });
