@@ -95,4 +95,6 @@ article > content #message{
   grid-column: 1 / span 3;
   grid-row: 2 / span 1;
   margin-left: 1.5em;
+  margin-right: 1.5em;
+  word-break: break-all;
 } 
