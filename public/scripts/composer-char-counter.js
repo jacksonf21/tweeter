@@ -10,9 +10,16 @@ $(document).ready(function() {
     if (this.value.length > 140) $('span.counter').addClass('active');
     else $('span.counter').removeClass('active');
 
+
+    // if ($('#errAlert').is(':visible')) {
+    //   $('#errAlert').slideUp(400);
+    //   console.log('fire');
+    // }
+
     this.style.height = 'auto';
     this.style.height = (Number(this.scrollHeight) + 2) + 'px';
   });
+
 
   // $(newPostField).on('keydown', function() {
   //   counter.innerText = 140 - this.value.length;

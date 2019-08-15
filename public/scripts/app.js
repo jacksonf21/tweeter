@@ -80,6 +80,8 @@ $(document).ready(()=> {
     
     if (validInput(input)) {
       $('#errAlert').hide(400);
+      $('.counter').text(140);
+      // $('.new-tweet textarea').
 
       let tweet = $('.new-tweet textarea').serialize();
       $('.new-tweet textarea').val('');
@@ -133,10 +135,7 @@ $(document).ready(()=> {
     });
   });
 
-  //
   $(window).scroll(() => {
-    
-    console.log($(document).scrollTop());
     
     if ($(document).scrollTop() > 400) {
       $('#button').fadeIn();
@@ -145,9 +144,18 @@ $(document).ready(()=> {
       $('#button').fadeOut();
       $('#navbox div').fadeIn();
     }
-
-    // $('#button').animate({height: '200px'});
-    // $('#button').animate({height: '30px'});
   });
+
+  $('.new-tweet textarea').keydown((e) => {
+    if (e.keyCode === 13 && !e.ShiftKey) {
+      e.preventDefault();
+    }
+
+    if ($('#errAlert').is(':visible')) {
+      $('#errAlert').slideUp(400);
+    }
+
+  });
+
 
 });

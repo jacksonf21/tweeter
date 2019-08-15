@@ -42,3 +42,11 @@ span.counter {
 span.counter.active {
   color: red;
 }
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 425px) {
+  
+}
