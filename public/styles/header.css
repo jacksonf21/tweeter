@@ -1,17 +1,31 @@
-header {
-  margin-top: 120px;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #e39000;
-  background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
-
-}
-
 header h2 {
   margin-top: 0;
   min-width: 256px;
   text-align: center;
+}
+
+@media only screen and (max-width: 420px) {
+  /* Write smartphone only styles here */
+  header {
+    margin-top: 120px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e39000;
+    background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e39000;
+    background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
+  }
 }
