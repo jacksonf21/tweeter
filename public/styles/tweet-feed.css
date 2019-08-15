@@ -35,6 +35,11 @@
 
 #tweet-feed article:hover footer text {
   font-weight: 400;
+  opacity: 1;
+}
+
+#tweet-feed article:hover footer #icons {
+  opacity: 1;
 }
 
 #tweet-feed content {
@@ -54,16 +59,40 @@
 #tweet-feed footer text {
   margin-left: 1.5em;
   width: 140px;
+  opacity: 0.5;
 }
 
 #tweet-feed footer #icons {
   width: 100%;
   text-align: right;
   margin-right: 1em;
+  opacity: 0.5;
 }
 
 #tweet-feed footer #icons img {
   margin-left: 1em;
+  cursor: pointer;
+}
+
+.active2 {
+  content: url('../images/likefill.svg');
+  width: 25px;
+  height: 25px;
+  z-index: 3;
+}
+
+.active3 {
+  content: url('../images/sharefill.svg');
+  width: 25px;
+  height: 25px;
+  z-index: 3;
+}
+
+.active4 {
+  content: url('../images/flagfill.svg');
+  width: 25px;
+  height: 25px;
+  z-index: 3;
 }
 
 article > content {
@@ -111,6 +140,7 @@ article > content #message {
   margin-right: 1.5em;
   word-break: break-word;
 } 
+
 
 @media only screen and (max-width: 425px) {
   

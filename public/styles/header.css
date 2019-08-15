@@ -1,5 +1,23 @@
 
-/**/
+/* LAPTOP AND ABOVE */
+@media only screen and (min-width: 1024px) {
+
+  header {
+    position: fixed;
+    width: 40%;
+    background-color: #e39000;
+    background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
+  }
+  header img {
+    width: 30vh;
+    height: 30vh;
+  }
+  header h2 {
+    padding-top: 3vh;
+    font-size: 5vh;
+  }
+}
+/*MOBILE L AND ABOVE*/
 @media only screen and (min-width: 427px) {
   header h2 {
     margin-top: 0;
@@ -21,13 +39,16 @@
 /*MOBILE L - TABLET L*/
 @media only screen and (min-width: 425px) and (max-width: 1023px) {
   header {
-    margin-top: 4.5em;
+    margin-top: 5em;
+  }
+  header h2 {
+    padding-top: 3vh;
+    font-size: 4vh;
   }
 }
 
-
+/*MOBILE L AND BELOW*/
 @media only screen and (max-width: 425px) {
-  /* Write smartphone only styles here */
   header h2 {
     font-size: 1em;
   }

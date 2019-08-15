@@ -5,7 +5,7 @@
  */
 
 $(document).ready(()=> {
-
+  
   const escape = str => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -37,9 +37,9 @@ $(document).ready(()=> {
           <footer>
             <text>${date(tweet)}</text>
             <div id='icons'>
-              <img src='images/like.svg' width='25px' height='25px'>
-              <img src='images/share.svg' width='25px' height='25px'>
-              <img src='images/flag.svg' width='20px' height='25px'>
+              <img class='like' src='images/like.svg' width='25px' height='25px'>
+              <img class='share' src='images/share.svg' width='25px' height='25px'>
+              <img class='flag' src='images/flag.svg' width='20px' height='25px'>
             </div>
           </footer>
         </article>`;
@@ -65,12 +65,61 @@ $(document).ready(()=> {
   };
 
   promise1()
-    .then((data) => appendTweet(tweetsString(data)));
+    .then(function(data) {
+      appendTweet(tweetsString(data));
+
+      $('.like').click(function() {
+        if ($(this).hasClass('active2')) {
+          $(this).removeClass('active2');
+        } else {
+          $(this).addClass('active2');
+        }
+      });
+
+      $('.share').click(function() {
+        if ($(this).hasClass('active3')) {
+          $(this).removeClass('active3');
+        } else {
+          $(this).addClass('active3');
+        }
+      });
+
+      $('.flag').click(function() {
+        if ($(this).hasClass('active4')) {
+          $(this).removeClass('active4');
+        } else {
+          $(this).addClass('active4');
+        }
+      });
+    });
 
   //AJAX POST AND GET REQUEST SUBSEQUENTLY ON NEW TWEET SUBMIT
   const ajaxGet = () => {
     $.get('/tweets', (data) => {
       prependTweet(tweetsString(data[0]));
+      $('.like:first').click(function() {
+        if ($(this).hasClass('active2')) {
+          $(this).removeClass('active2');
+        } else {
+          $(this).addClass('active2');
+        }
+      });
+
+      $('.share:first').click(function() {
+        if ($(this).hasClass('active3')) {
+          $(this).removeClass('active3');
+        } else {
+          $(this).addClass('active3');
+        }
+      });
+
+      $('.flag:first').click(function() {
+        if ($(this).hasClass('active4')) {
+          $(this).removeClass('active4');
+        } else {
+          $(this).addClass('active4');
+        }
+      });
     });
   };
 
@@ -158,5 +207,5 @@ $(document).ready(()=> {
       $('#errAlert').slideUp(400);
     }
   });
-
+  
 });
