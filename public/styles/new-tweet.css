@@ -13,10 +13,6 @@
   overflow: hidden;
 }
 
-.new-tweet textarea:focus{
-  font-size: 1em;
-}
-
 .new-tweet textarea::-webkit-input-placeholder {
   color: black;
   opacity: 1;
@@ -44,9 +40,29 @@ span.counter.active {
 }
 
 @media only screen and (min-width: 1024px) {
-
+  .new-tweet textarea:focus{
+    font-size: 1em;
+  }
 }
 
 @media only screen and (max-width: 425px) {
-  
+  .new-tweet textarea{
+    margin-top: 1em;
+    width: 100%;
+    height: 2em;
+    border: none;
+    border-bottom: solid black;
+    background-color: #f4f1ec;
+    outline: 0;
+    resize: none;
+    font-size: .7em;
+    overflow: hidden;
+  }
+
+  .new-tweet textarea::-webkit-input-placeholder {
+    color: black;
+    opacity: 1;
+    font-size: 1em;
+    font-weight: 600;
+  }
 }

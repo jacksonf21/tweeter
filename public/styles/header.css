@@ -1,26 +1,6 @@
 
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Write Tablet only CSS here */
-  header h2 {
-    margin-top: 0;
-    min-width: 256px;
-    text-align: center;
-  }
-
-  header {
-    margin-top: 120px;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #e39000;
-    background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
-  }
-}
-
-@media only screen and (min-width: 1024px) {
+/**/
+@media only screen and (min-width: 427px) {
   header h2 {
     margin-top: 0;
     min-width: 256px;
@@ -38,11 +18,17 @@
   }
 }
 
+/*MOBILE L - TABLET L*/
+@media only screen and (min-width: 425px) and (max-width: 1023px) {
+  header {
+    margin-top: 4.5em;
+  }
+}
+
+
 @media only screen and (max-width: 425px) {
   /* Write smartphone only styles here */
   header h2 {
-    margin-top: 0;
-    text-align: center;
     font-size: 1em;
   }
   

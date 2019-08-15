@@ -6,21 +6,14 @@
 
 $(document).ready(()=> {
 
-  const promise1 = () => {
-    return new Promise((resolve, reject) => {
-      $.getJSON('/tweets', (data) => {
-        resolve(data);
-      });
-    });
-  };
-
-  //SHOULD APPEND ALL ELEMENTS INTO A LOCAL ARRAY BEFORE CALLING JQUERY AND APPEND
   const escape = str => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  //DECIDED TO APPEND ALL HTML OF TWEETS INTO A SINGLE STRING TO CALL JQUERY ONLY ONCE
+  //TAKES AN ARRAY OF TWEET OBJECTS AND GETS RELATIVE VALUES
   const tweetsString = (tweets) => {
     let tweetsStr = '';
     if (!Array.isArray(tweets)) tweets = [tweets];
@@ -54,23 +47,30 @@ $(document).ready(()=> {
     return tweetsStr;
   };
 
-  const appendTweet = (tweet, num = 0) => {
-    if (num === 1) {
-      $('#tweet-feed').prepend(tweet);
-    } else {
-      $('#tweet-feed').append(tweet);
-    }
+  const appendTweet = (tweet) => {
+    $('#tweet-feed').append(tweet);
   };
 
-  //ROOT INIT TWEETS
+  const prependTweet = (tweet) => {
+    $('#tweet-feed').prepend(tweet);
+  };
+  
+  //INTIALIZE DB TWEETS
+  const promise1 = () => {
+    return new Promise((resolve, reject) => {
+      $.getJSON('/tweets', (data) => {
+        resolve(data);
+      });
+    });
+  };
+
   promise1()
     .then((data) => appendTweet(tweetsString(data)));
 
   //AJAX POST AND GET REQUEST SUBSEQUENTLY ON NEW TWEET SUBMIT
   const ajaxGet = () => {
     $.get('/tweets', (data) => {
-      console.log(data);
-      appendTweet(tweetsString(data[0]), 1);
+      prependTweet(tweetsString(data[0]));
     });
   };
 
@@ -81,7 +81,6 @@ $(document).ready(()=> {
     if (validInput(input)) {
       $('#errAlert').hide(400);
       $('.counter').text(140);
-      // $('.new-tweet textarea').
 
       let tweet = $('.new-tweet textarea').serialize();
       $('.new-tweet textarea').val('');
@@ -127,35 +126,37 @@ $(document).ready(()=> {
     denom = 86400000;
 
     return `${Math.round((Date.now() - elem.created_at) / denom)} ${unit}`;
+
   };
 
+  //HEADER NAV CLICK
   $('#target').click(() => {
     $('.new-tweet').slideToggle(400, () => {
       $('.new-tweet textarea').focus();
     });
   });
 
+  //NAV CLICK & BOTTOM RIGHT BUTTON FADE IN AND OUT
   $(window).scroll(() => {
-    
     if ($(document).scrollTop() > 400) {
       $('#button').fadeIn();
       $('#navbox div').fadeOut();
+
     } else if ($(document).scrollTop() < 400) {
       $('#button').fadeOut();
       $('#navbox div').fadeIn();
+      
     }
   });
 
+  //PREVENT TEXTAREA DEFAULT BEHAVIOURS
   $('.new-tweet textarea').keydown((e) => {
     if (e.keyCode === 13 && !e.ShiftKey) {
       e.preventDefault();
     }
-
-    if ($('#errAlert').is(':visible')) {
+    if ($('#errAlert').is(':visible') && (e.keyCode === 8 || e.keyCode === 46)) {
       $('#errAlert').slideUp(400);
     }
-
   });
-
 
 });

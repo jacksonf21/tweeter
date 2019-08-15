@@ -1,6 +1,6 @@
 
 #errAlert {
-  border: 3px dashed  #ff4d4d;
+  border: 3px solid #ff4d4d;
   width: 100%;
   color:  #ff4d4d;
   margin-top: 25px;
@@ -8,41 +8,41 @@
   display: none;
 }
 
-#tweet-feed article{
+#tweet-feed article {
   margin-top: 30px;
   margin-bottom: 30px;
   display: grid;
   grid-template-columns: .5% auto .5%; 
-  grid-template-rows: 250px 80px;
+  grid-template-rows: 265px 80px;
   border: solid black;
 }
 
-#tweet-feed article:hover{
+#tweet-feed article:hover {
   box-shadow: 5px 10px #888888;
 }
 
-#tweet-feed article:hover #name{
+#tweet-feed article:hover #name {
   font-weight: 400;
 }
 
-#tweet-feed article:hover #message{
+#tweet-feed article:hover #message {
   font-weight: 400;
 }
 
-#tweet-feed article:hover #handle{
+#tweet-feed article:hover #handle {
   opacity: .5;
 }
 
-#tweet-feed article:hover footer text{
+#tweet-feed article:hover footer text {
   font-weight: 400;
 }
 
-#tweet-feed content{
+#tweet-feed content {
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
 }
 
-#tweet-feed footer{
+#tweet-feed footer {
   display: flex;
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
@@ -51,18 +51,18 @@
   font-size: 17px;
 }
 
-#tweet-feed footer text{
+#tweet-feed footer text {
   margin-left: 1.5em;
   width: 140px;
 }
 
-#tweet-feed footer #icons{
+#tweet-feed footer #icons {
   width: 100%;
   text-align: right;
   margin-right: 1em;
 }
 
-#tweet-feed footer #icons img{
+#tweet-feed footer #icons img {
   margin-left: 1em;
 }
 
@@ -72,7 +72,7 @@ article > content {
   grid-template-rows: 128px 72px;
 } 
 
-article > content #name{
+article > content #name {
   display: grid;
   font-weight: 300;
   grid-template-columns: 80px auto;
@@ -92,7 +92,7 @@ article > content #name{
   grid-row: 1 / span 1;
 }
 
-article > content #handle{
+article > content #handle {
   align-self: center;
   margin-right: 1em;
   grid-column: 3 / span 1;
@@ -103,7 +103,7 @@ article > content #handle{
   opacity: 0;
 } 
 
-article > content #message{
+article > content #message {
   font-weight: 300;
   grid-column: 1 / span 3;
   grid-row: 2 / span 1;
@@ -112,124 +112,43 @@ article > content #message{
   word-break: break-word;
 } 
 
-
 @media only screen and (max-width: 425px) {
-  #errAlert {
-    border: 3px dashed  #ff4d4d;
-    width: 100%;
-    color:  #ff4d4d;
-    margin-top: 25px;
-    padding: 8px;
-    display: none;
-  }
   
   #tweet-feed article{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: grid;
-    grid-template-columns: .5% auto .5%; 
-    grid-template-rows: 250px 80px;
-    border: solid black;
+    grid-template-columns: .5% 99% .5%; 
+    grid-template-rows: 200px 60px;
   }
   
-  #tweet-feed article:hover{
-    box-shadow: 5px 10px #888888;
-  }
-  
-  #tweet-feed article:hover #name{
-    font-weight: 400;
-  }
-  
-  #tweet-feed article:hover #message{
-    font-weight: 400;
-  }
-  
-  #tweet-feed article:hover #handle{
-    opacity: .5;
-  }
-  
-  #tweet-feed article:hover footer text{
-    font-weight: 400;
-  }
-  
-  #tweet-feed content{
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-  }
-  
-  #tweet-feed footer{
-    display: flex;
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-    border-top: solid black;
-    padding-top: 1em;
-    font-size: 17px;
-  }
-  
-  #tweet-feed footer text{
-    margin-left: 1.5em;
-    width: 140px;
-  }
-  
-  #tweet-feed footer #icons{
-    width: 100%;
-    text-align: right;
-    margin-right: 1em;
-  }
-  
-  #tweet-feed footer #icons img{
-    margin-left: 1em;
+  #tweet-feed footer {
+    font-size: .5em;
   }
   
   article > content {
     display: grid;
     grid-template-columns: 33% auto 33%;
-    grid-template-rows: 128px 72px;
+    grid-template-rows: 100px 72px;
   } 
   
-  article > content #name{
+  article > content #name {
     display: grid;
     font-weight: 300;
-    grid-template-columns: 80px auto;
+    grid-template-columns: 70px auto;
   }
   
-  article > content #name text{
+  article > content #name text {
     font-size: .7em;
   }
   
   #name img {
-    margin-top: 1em;
-    margin-left: 1em;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
+    margin-top: .5em;
+    margin-left: .5em;
   }
   
-  #name text {
-    align-self: center;
-    margin-left: 20px;
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-  }
-  
-  article > content #handle{
-    align-self: center;
-    margin-right: 1em;
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 1;
-    display: flex;
-    justify-content: flex-end;
-    color: gray;
-    opacity: 0;
-    font-size: .7em;
+  article > content #handle {
+    font-size: .5em;
   } 
   
-  article > content #message{
-    font-weight: 300;
-    grid-column: 1 / span 3;
-    grid-row: 2 / span 1;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-    word-break: break-word;
+  article > content #message {
     font-size: .7em;
   } 
   
