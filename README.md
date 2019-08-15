@@ -16,4 +16,20 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 
-##
+## Images
+
+Home 
+!["screenshot of home"](https://github.com/jacksonf21/tweeter/blob/master/docs/home.png?raw=true)
+
+New tweets!
+!["screenshot of new tweets"](https://github.com/jacksonf21/tweeter/blob/master/docs/newtweet.png?raw=true)
+
+Error handling
+!["screenshot of error"](https://github.com/jacksonf21/tweeter/blob/master/docs/error.png?raw=true)
+
+Additional button
+!["screenshot of additional button"](https://github.com/jacksonf21/tweeter/blob/master/docs/br_button.png?raw=true)
+
+Button toggling
+!["screenshot of button toggle"](https://github.com/jacksonf21/tweeter/blob/master/docs/button_toggle.png?raw=true)
+
